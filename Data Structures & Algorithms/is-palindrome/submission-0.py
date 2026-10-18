@@ -1,4 +1,8 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        filtered = "".join(c.lower() for c in s if c.isalnum())
-        return filtered == filtered[::-1]
+        cleaned = ""
+        for char in s.lower():
+            if char.isalnum():
+                cleaned += char
+        return cleaned == cleaned[::-1]
+                
